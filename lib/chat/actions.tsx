@@ -1,4 +1,4 @@
-rch onlineimport 'server-only'
+import 'server-only'
 
 import {
   createAI,
