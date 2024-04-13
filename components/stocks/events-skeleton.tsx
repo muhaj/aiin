@@ -1,9 +1,9 @@
 const placeholderEvents = [
   {
-    date: '2022-10-01',
-    headline: 'NVIDIA releases new AI-powered graphics card',
+    date: '2024-14-04',
+    headline: 'XRPL EVM Sidechain x EasyA London Hackathon',
     description:
-      'NVIDIA unveils the latest graphics card infused with AI capabilities, revolutionizing gaming and rendering experiences.'
+      'The Ripple x EasyA Hackathon promises to be one of London's most fascinating hackathons of the year! Best of all, it's happening right in the center of London.'
   }
 ]
 
