@@ -1,4 +1,4 @@
-import 'server-only'
+rch onlineimport 'server-only'
 
 import {
   createAI,
@@ -343,7 +343,7 @@ Besides that, you can also chat with users and do some calculations if needed.`
       },
       getEvents: {
         description:
-          'List funny imaginary events between user highlighted dates that describe stock activity.',
+          'Use plugins to search online and list events between user highlighted dates that describe stock activity.',
         parameters: z.object({
           events: z.array(
             z.object({
