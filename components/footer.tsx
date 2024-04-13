@@ -13,9 +13,9 @@ export function FooterText({ className, ...props }: React.ComponentProps<'p'>) {
       {...props}
     >
       Open source AI chatbot built with{' '}
-      <ExternalLink href="https://nextjs.org">Next.js</ExternalLink> and{' '}
-      <ExternalLink href="https://github.com/vercel/ai">
-        Vercel AI SDK
+      <ExternalLink href="https://xrpl.org/">XRPL</ExternalLink> and{' '}
+      <ExternalLink href="https://github.com/muhaj/aiin">
+        XRP EVM Sidechain
       </ExternalLink>
       .
     </p>
