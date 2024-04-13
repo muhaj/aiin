@@ -71,7 +71,7 @@ export function Header() {
           className={cn(buttonVariants())}
         >
           <IconVercel className="mr-2" />
-          <span className="hidden sm:block">Wallet Connected</span>
+          <span className="hidden sm:block">Connect Wallet</span>
           <span className="sm:hidden">Deploy</span>
         </a>
       </div>
