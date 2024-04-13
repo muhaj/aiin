@@ -197,7 +197,7 @@ Besides that, you can also chat with users and do some calculations if needed.`
     },
     functions: {
       listStocks: {
-        description: 'List three imaginary stocks that are trending.',
+        description: 'Use search plugins and list six stocks that are trending.',
         parameters: z.object({
           stocks: z.array(
             z.object({
