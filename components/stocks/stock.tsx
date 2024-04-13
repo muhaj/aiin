@@ -75,7 +75,7 @@ export function Stock({ props: { symbol, price, delta } }: { props: Stock }) {
       <div className="text-lg text-zinc-300">{symbol}</div>
       <div className="text-3xl font-bold">${price}</div>
       <div className="text mt-1 text-xs text-zinc-500">
-        Closed: Feb 27, 4:59 PM EST
+        Closed: Apr 14, 8:59 AM EST
       </div>
 
       <div
