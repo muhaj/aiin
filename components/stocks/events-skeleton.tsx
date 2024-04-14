@@ -3,7 +3,7 @@ const placeholderEvents = [
     date: '2024-14-04',
     headline: 'XRPL EVM Sidechain x EasyA London Hackathon',
     description:
-      'The Ripple x EasyA Hackathon promises to be one of London's most fascinating hackathons of the year! Best of all, it's happening right in the center of London.'
+      'The Ripple x EasyA Hackathon promises to be one of London most fascinating hackathons of the year! Best of all, it happening right in the center of London.'
   }
 ]
 
