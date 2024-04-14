@@ -142,7 +142,7 @@ async function submitUserMessage(content: string) {
   let textNode: undefined | React.ReactNode
 
   const ui = render({
-    model: 'gpt-4-turbo',
+    model: 'gpt-3.5-turbo',
     provider: openai,
     initial: <SpinnerMessage />,
     messages: [
@@ -160,7 +160,7 @@ If the user requests purchasing a stock, call \`show_stock_purchase_ui\` to show
 If the user just wants the price, call \`show_stock_price\` to show the price.
 If you want to show trending stocks, call \`list_stocks\`.
 If you want to show events, call \`get_events\`.
-If the user wants to sell stock, or complete another impossible task, respond that you are an MVP and that that functionality is not implemented yet so you cannot do that.
+If the user wants to sell stock, or complete another impossible task, respond that you are a demo and cannot do that.
 
 Besides that, you can also chat with users and do some calculations if needed.`
       },
@@ -197,7 +197,7 @@ Besides that, you can also chat with users and do some calculations if needed.`
     },
     functions: {
       listStocks: {
-        description: 'Use the functions tool and search the internet in real-time, and list three stocks that are trending.',
+        description: 'List three imaginary stocks that are trending.',
         parameters: z.object({
           stocks: z.array(
             z.object({
@@ -238,7 +238,7 @@ Besides that, you can also chat with users and do some calculations if needed.`
       },
       showStockPrice: {
         description:
-          'Use functions to get the current stock price of a given stock or currency. Use this to show the price to the user.',
+          'Get the current stock price of a given stock or currency. Use this to show the price to the user.',
         parameters: z.object({
           symbol: z
             .string()
@@ -343,7 +343,7 @@ Besides that, you can also chat with users and do some calculations if needed.`
       },
       getEvents: {
         description:
-          'Use functions tool and search the internet in real-time, fetch data from various sources like news websites, financial databases, and other reliable sources to provide the most current information available, and list events between user highlighted dates that describe stock activity.',
+          'List funny imaginary events between user highlighted dates that describe stock activity.',
         parameters: z.object({
           events: z.array(
             z.object({
