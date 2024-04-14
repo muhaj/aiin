@@ -197,7 +197,7 @@ Besides that, you can also chat with users and do some calculations if needed.`
     },
     functions: {
       listStocks: {
-        description: 'Use the functions tool and search the internet in real-time, fetch data from various sources like news websites, financial databases, and other reliable sources to provide the most current information available, and list six stocks that are trending.',
+        description: 'Use the functions tool and search the internet in real-time, and list three stocks that are trending.',
         parameters: z.object({
           stocks: z.array(
             z.object({
