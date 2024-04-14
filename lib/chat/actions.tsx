@@ -160,7 +160,7 @@ If the user requests purchasing a stock, call \`show_stock_purchase_ui\` to show
 If the user just wants the price, call \`show_stock_price\` to show the price.
 If you want to show trending stocks, call \`list_stocks\`.
 If you want to show events, call \`get_events\`.
-If the user wants to sell stock, or complete another impossible task, respond that you are a demo and cannot do that.
+If the user wants to sell stock, or complete another impossible task, respond that you are an MVP and that that functionality is not implemented yet so you cannot do that.
 
 Besides that, you can also chat with users and do some calculations if needed.`
       },
