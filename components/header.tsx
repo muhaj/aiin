@@ -70,7 +70,7 @@ export function Header() {
           target="_blank"
           className={cn(buttonVariants())}
         >
-          <IconVercel className="mr-2" />
+          <IconXRPL className="mr-2" />
           <span className="hidden sm:block">Connect Wallet</span>
           <span className="sm:hidden">Deploy</span>
         </a>
