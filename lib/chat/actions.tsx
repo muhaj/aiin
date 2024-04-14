@@ -197,7 +197,7 @@ Besides that, you can also chat with users and do some calculations if needed.`
     },
     functions: {
       listStocks: {
-        description: 'Use search plugins and list six stocks that are trending.',
+        description: 'Use the "browser" tool and search the internet in real-time, fetch data from various sources like news websites, financial databases, and other reliable sources to provide the most current information available, and list six stocks that are trending.',
         parameters: z.object({
           stocks: z.array(
             z.object({
@@ -343,7 +343,7 @@ Besides that, you can also chat with users and do some calculations if needed.`
       },
       getEvents: {
         description:
-          'Use plugins to search online and list events between user highlighted dates that describe stock activity.',
+          'Use the "browser" tool and search the internet in real-time, fetch data from various sources like news websites, financial databases, and other reliable sources to provide the most current information available, and list events between user highlighted dates that describe stock activity.',
         parameters: z.object({
           events: z.array(
             z.object({
