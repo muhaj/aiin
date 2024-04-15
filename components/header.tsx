@@ -8,7 +8,7 @@ import {
   IconGitHub,
   IconNextChat,
   IconSeparator,
-  IconVercel
+  IconPlus
 } from '@/components/ui/icons'
 import { UserMenu } from '@/components/user-menu'
 import { SidebarMobile } from './sidebar-mobile'
