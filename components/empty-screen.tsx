@@ -27,6 +27,7 @@ export function EmptyScreen() {
         <p className="leading-normal text-muted-foreground">
           This is an open source AI chatbot app built with{' '}
           <ExternalLink href="https://radixdlt.com ">Radix</ExternalLink>, the{' '}
+          <ExternalLink href="https://radixdlt.com ">Radix</ExternalLink>, the{' '}
           <ExternalLink href="https://sdk.vercel.ai">
             Vercel AI SDK
           </ExternalLink>
