@@ -35,6 +35,13 @@
     --radius: 0.5rem;
   }
  
+  radix-connect-button {
+    --radix-connect-button-width: 200px;
+    --radix-connect-button-height: 42px;
+    --radix-connect-button-border-radius: 12px;
+  }
+
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
