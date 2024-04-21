@@ -12,6 +12,12 @@ interface Stock {
   delta: number
 }
 
+interface PriceData {
+  symbol: string;
+  price: number;
+  delta: number;
+}
+
 export function Stock({ props: { symbol, price, delta } }: { props: Stock }) {
   const [aiState, setAIState] = useAIState()
   const id = useId()
@@ -22,48 +28,63 @@ export function Stock({ props: { symbol, price, delta } }: { props: Stock }) {
     x: 0
   })
 
-  const [startHighlight, setStartHighlight] = useState(0)
-  const [endHighlight, setEndHighlight] = useState(0)
+  const [astroData, setAstroData] = useState<any>(null);
 
-  const chartRef = useRef<HTMLDivElement>(null)
+  const [startHighlight, setStartHighlight] = useState<number>(0);
+  const [endHighlight, setEndHighlight] = useState<number>(0);
+
+  const chartRef = useRef<HTMLDivElement>(null);
   const { width = 0 } = useResizeObserver({
     ref: chartRef,
     box: 'border-box'
-  })
+  });
 
   const xToDate = scaleLinear(
     [0, width],
     [subMonths(new Date(), 6), new Date()]
-  )
+  );
   const xToValue = scaleLinear(
     [0, width],
     [price - price / 2, price + price / 2]
-  )
+  );
 
   useEffect(() => {
     if (startHighlight && endHighlight) {
       const message = {
-        id,
+        id: id.current,
         role: 'system' as const,
-        content: `[User has highlighted dates between between ${format(
+        content: `[User has highlighted dates between ${format(
           xToDate(startHighlight),
           'd LLL'
-        )} and ${format(xToDate(endHighlight), 'd LLL, yyyy')}`
-      }
+        )} and ${format(xToDate(endHighlight), 'd LLL, yyyy')}]`
+      };
 
-      if (aiState.messages[aiState.messages.length - 1]?.id === id) {
+      if (aiState.messages[aiState.messages.length - 1]?.id === id.current) {
         setAIState({
           ...aiState,
           messages: [...aiState.messages.slice(0, -1), message]
-        })
+        });
       } else {
         setAIState({
           ...aiState,
           messages: [...aiState.messages, message]
-        })
+        });
       }
     }
-  }, [startHighlight, endHighlight])
+  }, [startHighlight, endHighlight, aiState, setAIState]);
+
+  useEffect(() => {
+    fetch('https://api.astrolescent.com/partner/hackathon/prices')
+      .then((res) => res.json())
+      .then((data: any) => {
+        //console.log(Object.entries(data));
+
+        const dataObj = Object.entries(data);
+        setAstroData(dataObj); 
+
+
+      });
+  }, []);
 
   return (
     <div className="rounded-xl border bg-zinc-950 p-4 text-green-400">
@@ -73,7 +94,7 @@ export function Stock({ props: { symbol, price, delta } }: { props: Stock }) {
         }`}
       </div>
       <div className="text-lg text-zinc-300">{symbol}</div>
-      <div className="text-3xl font-bold">${price}</div>
+      <div className="text-3xl font-bold">${price.toFixed(2)}</div>
       <div className="text mt-1 text-xs text-zinc-500">
         Closed: Apr 14, 8:59 AM EST
       </div>
@@ -151,7 +172,26 @@ export function Stock({ props: { symbol, price, delta } }: { props: Stock }) {
             }}
           ></div>
         ) : null}
+    <div>
 
+      {
+        astroData && astroData?.map((item: any) =>{
+
+          const resource = item[0];
+          const meta: any = item[1];
+
+          console.log(meta)
+
+          return (
+            <div key={meta.address}>
+            {/* <p>{meta.symbol}: ${meta.tokenPriceUSD.toFixed(2)} ({meta.delta.toFixed(2)}%)</p> */}
+            </div>
+          )
+
+        })
+
+      }
+      </div>
         <svg
           viewBox="0 0 250.0 168.0"
           height="150"
@@ -204,7 +244,14 @@ export function Stock({ props: { symbol, price, delta } }: { props: Stock }) {
             style={{ fill: 'url(#chart-grad-_f1bJZYLUHqWpxc8Prs2meA_33)' }}
           ></path>
         </svg>
+        </div>
+ 
+
+
+export default StockComponent;
       </div>
+    );
+}
     </div>
   )
 }
