@@ -13,10 +13,10 @@ export const metadata = {
     ? new URL(`https://${process.env.VERCEL_URL}`)
     : undefined,
   title: {
-    default: 'XRPL AI Chatbot',
-    template: `%s - XRPL AI Chatbot`
+    default: 'Radix AI Invest Chatbot',
+    template: `%s - Radix AI Invest Chatbot`
   },
-  description: 'An AI-powered chatbot built with XRPL EVM Sidechain.',
+  description: 'An AI-powered Investment chatbot built with Radix.',
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon-16x16.png',

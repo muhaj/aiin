@@ -37,23 +37,23 @@ export function ChatPanel({
   const exampleMessages = [
     {
       heading: 'What are the',
-      subheading: 'trending memecoins today?',
-      message: `What are the trending memecoins today?`
+      subheading: 'trending opportunities today?',
+      message: `What are the trending opportunities today?`
     },
     {
       heading: 'What is the price of',
-      subheading: '$XRP right now?',
-      message: 'What is the price of $XRP right now?'
+      subheading: '$XRD right now?',
+      message: 'What is the price of $XRD right now?'
     },
     {
       heading: 'I would like to buy',
-      subheading: '42 $XRP',
-      message: `I would like to buy 42 $XRP`
+      subheading: '42 $XRD',
+      message: `I would like to buy 42 $XRD`
     },
     {
       heading: 'What are some',
-      subheading: `recent events about $XRP?`,
-      message: `What are some recent events about $XRP?`
+      subheading: `recent events about $XRD?`,
+      message: `What are some recent events about $XRD?`
     }
   ]
 

@@ -36,6 +36,13 @@ import { SpinnerMessage, UserMessage } from '@/components/stocks/message'
 import { Chat } from '@/lib/types'
 import { auth } from '@/auth'
 
+async function fetchStockPrices() {
+  const response = await fetch('https://api.astrolescent.com/partner/hackathon/prices');
+  const data = await response.json();
+  // Handle updating your application state here
+  return data;
+}
+
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY || ''
 })
@@ -197,7 +204,7 @@ Besides that, you can also chat with users and do some calculations if needed.`
     },
     functions: {
       listStocks: {
-        description: 'List three imaginary stocks that are trending one has to be XRD.',
+        description: 'List three stocks that are trending one has to be XRD.',
         parameters: z.object({
           stocks: z.array(
             z.object({
