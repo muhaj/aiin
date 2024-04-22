@@ -1,6 +1,6 @@
 # AI Invest AI Chatbot for Stock Trading
 
-![Project Logo](Ai_invest.png) *Replace with the path to your logo*
+![Project Logo](Ai_invest.png) 
 
 **Tagline:** Revolutionizing Stock Trading with Conversational AI
 
