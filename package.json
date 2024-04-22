@@ -4,6 +4,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "install": "pnpm install",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "preview": "next build && next start",
@@ -11,6 +12,7 @@
     "type-check": "tsc --noEmit",
     "format:write": "prettier --write \"{app,lib,components}/**/*.{ts,tsx,mdx}\" --cache",
     "format:check": "prettier --check \"{app,lib,components}**/*.{ts,tsx,mdx}\" --cache"
+
   },
   "dependencies": {
     "@radix-ui/react-alert-dialog": "^1.0.5",
@@ -75,4 +77,5 @@
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.3.3"
   }
+  "packageManager": "pnpm@8.6.3"
 }
