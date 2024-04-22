@@ -11,13 +11,6 @@ interface Stock {
   price: number
   delta: number
 }
-
-interface PriceData {
-  symbol: string;
-  price: number;
-  delta: number;
-}
-
 export function Stock({ props: { symbol, price, delta } }: { props: Stock }) {
   const [aiState, setAIState] = useAIState()
   const id = useId()
