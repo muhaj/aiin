@@ -1,4 +1,4 @@
-# AIIN AI Chatbot for Stock Trading
+# AI Invest AI Chatbot for Stock Trading
 
 ![Project Logo](path-to-your-logo.png) *Replace with the path to your logo*
 
@@ -12,7 +12,7 @@
 
 ## Solution
 
-**AIIN AI Chatbot:** An AI-driven chatbot that simplifies stock trading through natural conversations.
+**AI Invest AI Chatbot:** An AI-driven chatbot that simplifies stock trading through natural conversations.
 
 **Features:**
 - Real-time stock information
@@ -59,21 +59,5 @@
 - **Current Status:** Development phase, key features implemented.
 - **Next Steps:** Beta testing, user feedback collection, additional feature development.
 - **Future Vision:** Expanding to other financial services, personal finance management, and global markets.
-## Running locally
-
-You will need to use the environment variables [defined in `.env.example`](.env.example) to run Next.js AI Chatbot. It's recommended you use [Vercel Environment Variables](https://vercel.com/docs/projects/environment-variables) for this, but a `.env` file is all that is necessary.
-
-> Note: You should not commit your `.env` file or it will expose secrets that will allow others to control access to your various OpenAI and authentication provider accounts.
-
-1. Install Vercel CLI: `npm i -g vercel`
-2. Link local instance with Vercel and GitHub accounts (creates `.vercel` directory): `vercel link`
-3. Download your environment variables: `vercel env pull`
-
-```bash
-pnpm install
-pnpm dev
-```
-
-Your app should now be running on [localhost:3000](http://localhost:3000/).
 
 

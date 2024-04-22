@@ -51,7 +51,7 @@ export function Stock({ props: { symbol, price, delta } }: { props: Stock }) {
   useEffect(() => {
     if (startHighlight && endHighlight) {
       const message = {
-        id: id.current,
+        id: id,
         role: 'system' as const,
         content: `[User has highlighted dates between ${format(
           xToDate(startHighlight),
@@ -59,7 +59,7 @@ export function Stock({ props: { symbol, price, delta } }: { props: Stock }) {
         )} and ${format(xToDate(endHighlight), 'd LLL, yyyy')}]`
       };
 
-      if (aiState.messages[aiState.messages.length - 1]?.id === id.current) {
+      if (aiState.messages[aiState.messages.length - 1]?.id === id) {
         setAIState({
           ...aiState,
           messages: [...aiState.messages.slice(0, -1), message]
@@ -71,7 +71,7 @@ export function Stock({ props: { symbol, price, delta } }: { props: Stock }) {
         });
       }
     }
-  }, [startHighlight, endHighlight, aiState, setAIState]);
+  }, [startHighlight, endHighlight, aiState]);
 
   useEffect(() => {
     fetch('https://api.astrolescent.com/partner/hackathon/prices')
@@ -80,6 +80,7 @@ export function Stock({ props: { symbol, price, delta } }: { props: Stock }) {
         //console.log(Object.entries(data));
 
         const dataObj = Object.entries(data);
+
         setAstroData(dataObj); 
 
 
