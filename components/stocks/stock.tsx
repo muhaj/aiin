@@ -64,7 +64,7 @@ export function Stock({ props: { symbol, price, delta } }: { props: Stock }) {
         });
       }
     }
-  }, [startHighlight, endHighlight, aiState]);
+  }, [startHighlight, endHighlight, id, xToDate, setAIState, aiState]);
 
   useEffect(() => {
     fetch('https://api.astrolescent.com/partner/hackathon/prices')
