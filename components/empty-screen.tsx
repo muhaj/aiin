@@ -25,7 +25,7 @@ export function EmptyScreen() {
           Welcome to AI Invest, Radix Chatbot!
         </h1>
         <p className="leading-normal text-muted-foreground">
-          This is an open source AI Invest app built with{' '}
+          This is an AI Invest app built with{' '}
           <ExternalLink href="https://radixdlt.com ">Radix</ExternalLink>, the{' '}
           <ExternalLink href="https://sdk.vercel.ai">
             Vercel AI SDK
