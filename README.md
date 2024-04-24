@@ -23,7 +23,7 @@
 
 **Model Providers** Aiin ships with OpenAI `gpt-3.5-turbo` as the default. However, thanks to the [Vercel AI SDK](https://sdk.vercel.ai/docs), you can switch LLM providers to [Anthropic](https://anthropic.com), [Cohere](https://cohere.com/), [Hugging Face](https://huggingface.co), or using [LangChain](https://js.langchain.com) with just a few lines of code.
 
-**Built With:** Advanced AI models, React for streamable UI components, and server-side logic for secure transactions.
+**Built With:** Advanced AI models, React for streamable UI components, and Radix Blockchain for secure transactions.
 
 **Integration:** Seamlessly integrates with Radix Blockchain and [Astrolescent API](https://api.astrolescent.com/partner/hackathon/swap).
 
