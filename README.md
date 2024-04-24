@@ -25,7 +25,7 @@
 
 **Built With:** Advanced AI models, React for streamable UI components, and server-side logic for secure transactions.
 
-**Integration:** Seamlessly integrates with MetaMask for transactions on the EVM Sidechain.
+**Integration:** Seamlessly integrates with Radix Blockchain and [Astrolescent API](https://api.astrolescent.com/partner/hackathon/swap).
 
 ## Key Features
 
